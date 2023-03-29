@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family:"Merriweather Sans",sans-serif ;
+    color: #4c6986;
+}
+
+.container{
+    max-width: 1240px;
+    height: 700px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.restart{
+    /* background-color: pink; */
+    width: 175px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: 2px solid #4c6986;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.restart:hover{
+    color: whitesmoke;
+    background: #4c6986;
+}
+.header{
+    display: flex;
+    color: #9a9a9a;
+    font-size: 24px;
+}
+.game{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.board{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.header .player-x{
+    border-bottom: 5px solid #eee;
+    flex:1;
+}
+
+.header .player-y{
+    border-bottom: 5px solid #eee;
+    flex:1;
+}
+
+.board-tile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+}
+
+.board-tile:not(:nth-child(3n)){
+    border-right: 3px solid rgba(137, 163, 189, 34);
+}
+
+.board-tile:not(:nth-last-child(-n+3)){
+    border-bottom: 3px solid rgba(137, 163, 189, 34);
+}
+
+.board-tile:hover{
+    background-color: #eee;
+    font: bolder;
+    cursor: pointer;
+}
