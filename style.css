@@ -2,6 +2,10 @@
     box-sizing: border-box;
     margin: 0;
 }
+h1{
+    font-size: 70px;
+    font-weight: bold;
+}
 
 body{
     font-family:"Merriweather Sans",sans-serif ;
@@ -63,9 +67,19 @@ body{
     flex:1;
 }
 
-.header .player-y{
+.header .player-o{
     border-bottom: 5px solid #eee;
     flex:1;
+}
+
+.player-x.active{
+    color: #42bed7;
+    border-color: #42bed7;
+}
+
+.player-o.active{
+    color: #d7bafb;
+    border-color: #d7bafb;
 }
 
 .board-tile{
@@ -73,6 +87,7 @@ body{
     align-items: center;
     justify-content: center;
     font-size: 80px;
+    cursor: pointer;
 }
 
 .board-tile:not(:nth-child(3n)){
@@ -86,5 +101,4 @@ body{
 .board-tile:hover{
     background-color: #eee;
     font: bolder;
-    cursor: pointer;
 }
